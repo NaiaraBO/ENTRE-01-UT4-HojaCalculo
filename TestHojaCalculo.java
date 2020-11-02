@@ -2,7 +2,7 @@
 /**
  *  Clase con código para probar el resto de clases
  * 
- * @author - 
+ * @author - Naiara Borrega
  *  
  */
 public class TestHojaCalculo
@@ -11,7 +11,7 @@ public class TestHojaCalculo
     /**
      * Constructor  
      */
-    public TestHojaCalculo()    {
+    public TestHojaCalculo(){
 
     }
 
@@ -22,7 +22,7 @@ public class TestHojaCalculo
      * La fila4 que no se podrá guardar puedes crearla con el constructor por defecto
      * de fila (el que no tiene parámetros)
      */
-    public void test1() {
+    public void test1(){
            
 
         
@@ -35,7 +35,7 @@ public class TestHojaCalculo
      * incluyendo la hoja duplicada
      *  
      */
-    public void test2() {
+    public void test2(){
          
 
     }
@@ -46,7 +46,7 @@ public class TestHojaCalculo
      * incluyendo la hoja duplicada
      *  
      */
-    public void test3() {
+    public void test3(){
             
 
     }

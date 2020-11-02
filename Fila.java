@@ -5,7 +5,7 @@
  *  se anotan la fecha, los ingresos y los gastos correspondientes a un
  *  apunte  contable  de una empresa
  * 
- * @author - 
+ * @author - Naiara Borrega
  *  
  */
 public class Fila
@@ -18,58 +18,57 @@ public class Fila
     /**
      * Constructor  
      */
-    public Fila(String id)    {
-         
-
+    public Fila(String id){
+         this.id = id;
+         this.fecha = new Fecha(1,1,2020);
+         this.ingresos = 0;
+         this.gastos = 0;   
     }
 
     /**
      * Constructor  
      */
-    public Fila(String id, Fecha fecha, double ingresos, double gastos)    {
-        
-
+    public Fila(String id, Fecha fecha, double ingresos, double gastos){
+        this.id = id;
+        this.fecha = fecha;
+        this.ingresos = ingresos;
+        this.gastos = gastos;
     }
     
     /**
      * accesor para el id de la fila
      */
-    public String getId() {
+    public String getId(){
         return this.id;
-
     }
 
 
     /**
      * accesor para la fecha
      */
-    public Fecha getFecha() {
+    public Fecha getFecha(){
         return this.fecha;
-
     }
 
     /**
      * accesor para los ingresos
      */
-    public double getIngresos() {
+    public double getIngresos(){
         return this.ingresos;
-
     }
 
     /**
      * accesor para los gastos
      */
-    public double getGastos() {
+    public double getGastos(){
         return this.gastos;
-
     }
 
     /**
      * calcula y devuelve el beneficio
      */
-    public double getBeneficio() {
+    public double getBeneficio(){
         return this.ingresos - this.gastos;
-
     }
     
     /**
@@ -77,20 +76,19 @@ public class Fila
      * La fecha que incluye la fila duplicada también es una copia
      * 
      */
-    public Fila duplicar() {
-       return null;
-
+    public Fila duplicar(){
+       Fila duplicaFila = new Fila(this.id, this.fecha, this.ingresos, this.gastos);
+       return duplicaFila;
     }
 
     /**
      * Representación textual de una fila
      * (leer enunciado)
      */
-    public String toString() {
-      return null;
-
-    }
-
-     
+    public String toString(){
+      double total = this.ingresos - this.gastos;      
+      String salida = String.format("%8a%15a%15,2f%15,2f%15,2f", id, fecha, ingresos, gastos, total);
+      return salida;
+    }     
 
 }
